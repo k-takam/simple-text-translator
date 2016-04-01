@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Text Translator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.16/css/bulma.min.css">
+</head>
+<body>
+  <div id="root">
+    <header class="header">
+      <div class="container">
+        <div class="header-left">
+          <h1 class="header-item">
+            Simple Text Translator
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-4 is-offset-8">
+            <p class="control">
+              <a class="button is-primary">
+                <span class="icon">
+                  <i class="fa fa-clipboard"></i>
+                </span>
+                <span>Copy to clipboard</span>
+              </a>
+              <a class="button is-success">
+                <span class="icon">
+                  <i class="fa fa-file-pdf-o"></i>
+                </span>
+                <span>Create PDF</span>
+              </a>
+            </p>
+          </div>
+          <div class="column is-half">
+            <label class="label">Japanese</label>
+            <p class="control">
+              <textarea class="textarea" placeholder="Textarea"></textarea>
+            </p>
+          </div>
+          <div class="column is-half">
+            <label class="label">English</label>
+            <p class="control">
+              <textarea class="textarea" placeholder="Textarea"></textarea>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content is-centered">
+          <p>
+            <strong>Simple Text Translator</strong> by k-takam.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/k-takam/simple-text-translator">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
