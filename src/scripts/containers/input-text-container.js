@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import InputText from '../components/input-text';
-import { changeText } from '../actions';
+import { fetchTranslate } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onChange: (inputText) => {
-      dispatch(changeText(inputText));
+      dispatch(fetchTranslate(inputText));
     }
   };
 };

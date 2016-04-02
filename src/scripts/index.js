@@ -1,12 +1,16 @@
-import css from '!style!css!sass!./../styles/style.sass';
+import '!style!css!sass!./../styles/style.sass';
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import App from './components/app';
 import Text from './reducers/text';
 
-let store = createStore(Text);
+const store = createStore(
+  Text,
+  applyMiddleware(thunk)
+);
 
 render(
   <Provider store={store}>

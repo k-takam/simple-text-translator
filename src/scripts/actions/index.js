@@ -1,6 +1,52 @@
-export const changeText = (inputText) => {
+import request from 'superagent';
+
+export const requestTranslate = (inputText) => {
   return {
-    type: 'CHANGE_TEXT',
+    type: 'REQUEST_TRANSLATE',
     inputText
+  };
+};
+
+export const receiveTranslate = (inputText, json) => {
+  return {
+    type: 'RECEIVE_TRANSLATE',
+    inputText,
+    outputText: json.translate
+  };
+};
+
+export const clearTranslate = () => {
+  return {
+    type: 'RECEIVE_TRANSLATE',
+    inputText: '',
+    outputText: ''
+  };
+};
+
+export const copyToClipboard = () => {
+  return {
+    type: 'COPY_TO_CLIPBOARD'
+  };
+};
+
+export const createPDF = () => {
+  return {
+    type: 'CREATE_PDF'
+  };
+};
+
+export const fetchTranslate = (inputText) => {
+  return (dispatch) => {
+    if (inputText) {
+      dispatch(requestTranslate(inputText));
+      return request
+        .get(`http://translateapi.azurewebsites.net/api/${inputText}`)
+        .end((err, res) => {
+          if (err) console.log(err);
+          dispatch(receiveTranslate(inputText, res.body));
+        });
+    } else {
+      dispatch(clearTranslate());
+    }
   };
 };

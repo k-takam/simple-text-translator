@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Menu from '../components/menu';
-import { copyToClipboard } from '../actions';
-import { createPDF } from '../actions';
+import { copyToClipboard, createPDF } from '../actions';
 
 const mapStateToProps = (state) => {
   return {

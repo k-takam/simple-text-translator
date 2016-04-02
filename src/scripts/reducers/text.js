@@ -1,15 +1,15 @@
 const initialState = {
+  isFetching: false,
   inputText: '',
   outputText: ''
 };
 
 const text = (state = initialState, action) => {
   switch (action.type) {
-    case 'CHANGE_TEXT':
-      return {
-        inputText: action.inputText,
-        outputText: action.inputText
-      };
+    case 'REQUEST_TRANSLATE':
+      return Object.assign({}, state, {isFetching: true});
+    case 'RECEIVE_TRANSLATE':
+      return Object.assign({}, state, {isFetching: false, outputText: action.outputText});
     default:
       return state;
   }
