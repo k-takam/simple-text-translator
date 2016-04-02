@@ -15,11 +15,9 @@ export const receiveTranslate = (inputText, json) => {
   };
 };
 
-export const clearTranslate = () => {
+export const clearText = () => {
   return {
-    type: 'RECEIVE_TRANSLATE',
-    inputText: '',
-    outputText: ''
+    type: 'CLEAR_TEXT'
   };
 };
 
@@ -46,7 +44,7 @@ export const fetchTranslate = (inputText) => {
           dispatch(receiveTranslate(inputText, res.body));
         });
     } else {
-      dispatch(clearTranslate());
+      dispatch(clearText());
     }
   };
 };
