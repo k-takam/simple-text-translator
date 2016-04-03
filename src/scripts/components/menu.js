@@ -15,13 +15,17 @@ export default class Menu extends Component {
       this.copyText(this.props.outputText);
       this.openModal('success', '翻訳されたテキストをコピーしました。');
     } else {
-      this.openModal('warning', 'テキストが入力されていません。');
+      this.openModal('warning', '翻訳したい文章を入力してください。');
     }
   }
 
   handleSaveClick(e) {
     e.preventDefault();
-    this.savePDF(this.props.outputText);
+    if (this.props.outputText) {
+      this.savePDF(this.props.outputText);
+    } else {
+      this.openModal('warning', '翻訳したい文章を入力してください。');
+    }
   }
 
   copyText(text, id) {
