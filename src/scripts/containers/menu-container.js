@@ -10,21 +10,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onCopyClick: () => {
-      dispatch(copyToClipboard());
-    },
-
-    onSaveClick: () => {
-      dispatch(createPDF());
-    }
-  };
-};
-
 const MenuContainer =  connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(Menu);
 
 export default MenuContainer;

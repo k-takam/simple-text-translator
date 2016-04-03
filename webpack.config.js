@@ -10,6 +10,9 @@ module.exports = {
     publicPath: "/dist/",
     filename: 'bundle.js'
   },
+  externals: {
+    "jspdf": "jsPDF"
+  },
   devtool: 'inline-source-map',
   resolve: {
     root: [path.join(__dirname, 'node_modules')],
@@ -43,5 +46,6 @@ module.exports = {
       }
     ]
   },
+  node: { fs: 'empty' },
   eslint: { configFile: '.eslintrc' }
 };

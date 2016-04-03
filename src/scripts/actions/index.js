@@ -21,18 +21,6 @@ export const clearText = () => {
   };
 };
 
-export const copyToClipboard = () => {
-  return {
-    type: 'COPY_TO_CLIPBOARD'
-  };
-};
-
-export const createPDF = () => {
-  return {
-    type: 'CREATE_PDF'
-  };
-};
-
 export const fetchTranslate = (inputText) => {
   return (dispatch) => {
     if (inputText) {
