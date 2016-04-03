@@ -5,7 +5,6 @@ import { copyToClipboard, createPDF } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
-    inputText: state.inputText,
     outputText: state.outputText
   };
 };

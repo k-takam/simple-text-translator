@@ -4,7 +4,7 @@ import OutputText from '../components/output-text';
 
 const mapStateToProps = (state) => {
   return {
-    inputText: state.inputText,
+    isFetching: state.isFetching,
     outputText: state.outputText
   };
 };

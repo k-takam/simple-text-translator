@@ -1,0 +1,72 @@
+// http://projects.lukehaas.me/css-loaders/
+
+$loading-color: #999;
+
+@mixin loader {
+  font-size: 10px;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load-animation 1.3s infinite linear;
+  animation: load-animation 1.3s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+@-webkit-keyframes load-animation {
+  0%,
+  100% {
+    box-shadow: 0 -1.5em 0 0.1em $loading-color, 1em -1em 0 0em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0 0 -0.5em $loading-color, -1em -1em 0 0 $loading-color;
+  }
+  12.5% {
+    box-shadow: 0 -1.5em 0 0 $loading-color, 1em -1em 0 0.1em $loading-color, 1.5em 0 0 0 $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  25% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 0 $loading-color, 1.5em 0 0 0.1em $loading-color, 1em 1em 0 0 $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  37.5% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0em 0 0 $loading-color, 1em 1em 0 0.1em $loading-color, 0 1.5em 0 0em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0em 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  50% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 0em $loading-color, 0 1.5em 0 0.1em $loading-color, -1em 1em 0 0 $loading-color, -1.5em 0em 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  62.5% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 0 $loading-color, -1em 1em 0 0.1em $loading-color, -1.5em 0 0 0 $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  75% {
+    box-shadow: 0em -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0em 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 0 $loading-color, -1.5em 0em 0 0.1em $loading-color, -1em -1em 0 0 $loading-color;
+  }
+  87.5% {
+    box-shadow: 0em -1.5em 0 0 $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 0 $loading-color, -1.5em 0em 0 0 $loading-color, -1em -1em 0 0.1em $loading-color;
+  }
+}
+@keyframes load-animation {
+  0%,
+  100% {
+    box-shadow: 0 -1.5em 0 0.1em $loading-color, 1em -1em 0 0em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0 0 -0.5em $loading-color, -1em -1em 0 0 $loading-color;
+  }
+  12.5% {
+    box-shadow: 0 -1.5em 0 0 $loading-color, 1em -1em 0 0.1em $loading-color, 1.5em 0 0 0 $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  25% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 0 $loading-color, 1.5em 0 0 0.1em $loading-color, 1em 1em 0 0 $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  37.5% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0em 0 0 $loading-color, 1em 1em 0 0.1em $loading-color, 0 1.5em 0 0em $loading-color, -1em 1em 0 -0.5em $loading-color, -1.5em 0em 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  50% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 0em $loading-color, 0 1.5em 0 0.1em $loading-color, -1em 1em 0 0 $loading-color, -1.5em 0em 0 -0.5em $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  62.5% {
+    box-shadow: 0 -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 0 $loading-color, -1em 1em 0 0.1em $loading-color, -1.5em 0 0 0 $loading-color, -1em -1em 0 -0.5em $loading-color;
+  }
+  75% {
+    box-shadow: 0em -1.5em 0 -0.5em $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0em 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 0 $loading-color, -1.5em 0em 0 0.1em $loading-color, -1em -1em 0 0 $loading-color;
+  }
+  87.5% {
+    box-shadow: 0em -1.5em 0 0 $loading-color, 1em -1em 0 -0.5em $loading-color, 1.5em 0 0 -0.5em $loading-color, 1em 1em 0 -0.5em $loading-color, 0 1.5em 0 -0.5em $loading-color, -1em 1em 0 0 $loading-color, -1.5em 0em 0 0 $loading-color, -1em -1em 0 0.1em $loading-color;
+  }
+}

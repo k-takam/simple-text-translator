@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Seaweed+Script)
 @import url(https://fonts.googleapis.com/css?family=Kaushan+Script)
+@import '_animation'
 
 body
 
@@ -20,8 +20,18 @@ body
   .header-item
     color: #fff
     font-size: 2.2rem
-    // font-family: 'Seaweed Script', cursive
     font-family: 'Kaushan Script', cursive
 
 .control
   text-align: right
+
+.output-area
+  &.is-fetching
+    position: relative
+    &::before
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ''
+      +loader
