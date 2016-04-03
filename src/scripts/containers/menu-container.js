@@ -1,16 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Menu from '../components/menu';
-import { copyToClipboard, createPDF } from '../actions';
+import { openModal } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
-    outputText: state.outputText
+    outputText: state.text.outputText
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    openModal: (type, modalText) => {
+      dispatch(openModal(type, modalText));
+    }
   };
 };
 
 const MenuContainer =  connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Menu);
 
 export default MenuContainer;

@@ -5,7 +5,7 @@ import { fetchTranslate } from '../actions';
 
 const mapStateToProps = (state) => {
   return {
-    inputText: state.inputText
+    inputText: state.text.inputText
   };
 };
 

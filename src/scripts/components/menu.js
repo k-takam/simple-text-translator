@@ -10,7 +10,13 @@ export default class Menu extends Component {
 
   handleCopyClick(e) {
     e.preventDefault();
-    this.copyText(this.props.outputText);
+
+    if (this.props.outputText) {
+      this.copyText(this.props.outputText);
+      this.openModal('success', '翻訳されたテキストをコピーしました。');
+    } else {
+      this.openModal('warning', 'テキストが入力されていません。');
+    }
   }
 
   handleSaveClick(e) {
@@ -29,6 +35,10 @@ export default class Menu extends Component {
     const doc = new jsPDF();
     doc.text(20, 20, text);
     doc.save('Translate.pdf');
+  }
+
+  openModal(modalType, modalText) {
+    this.props.openModal(modalType, modalText);
   }
 
   render() {
@@ -53,7 +63,7 @@ export default class Menu extends Component {
   }
 }
 
-
 Menu.propTypes = {
-  outputText: React.PropTypes.string
+  outputText: React.PropTypes.string,
+  openModal: React.PropTypes.func
 };

@@ -21,6 +21,20 @@ export const clearText = () => {
   };
 };
 
+export const openModal = (modalType, modalText) => {
+  return {
+    type: 'OPEN_MODAL',
+    modalType,
+    modalText
+  };
+};
+
+export const closeModal = () => {
+  return {
+    type: 'CLOSE_MODAL'
+  };
+};
+
 export const fetchTranslate = (inputText) => {
   return (dispatch) => {
     if (inputText) {

@@ -4,6 +4,7 @@ import Footer from './footer';
 import MenuContainer from '../containers/menu-container';
 import InputTextContainer from '../containers/input-text-container';
 import OutputTextContainer from '../containers/output-text-container';
+import ModalContainer from '../containers/modal-container';
 
 export default class App extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class App extends Component {
               <OutputTextContainer />
             </div>
           </div>
+          <ModalContainer />
         </section>
 
         <Footer />

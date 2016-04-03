@@ -5,10 +5,10 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import App from './components/app';
-import Text from './reducers/text';
+import translateApp from './reducers';
 
 const store = createStore(
-  Text,
+  translateApp,
   applyMiddleware(thunk)
 );
 
