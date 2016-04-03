@@ -10,7 +10,6 @@ export default class Menu extends Component {
 
   handleCopyClick(e) {
     e.preventDefault();
-    console.log(this);
     this.copyText(this.props.outputText);
   }
 
@@ -20,7 +19,6 @@ export default class Menu extends Component {
   }
 
   copyText(text, id) {
-    console.log('copy', text);
     const clipboard = new ClipboardAction({
       'text': text,
       'emitter': new EventEmitter()

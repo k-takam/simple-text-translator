@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import App from './components/app';
 import Text from './reducers/text';
-var fs = require('fs');
 
 const store = createStore(
   Text,
